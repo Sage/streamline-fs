@@ -2,13 +2,11 @@ var fs = require('fs');
 
 var exports = module.exports = Object.create(fs);
 
-exports.exists = function(path, _) {
-	return (function(cb) {
-		fs.exists(path, function(result) {
-			cb(null, result);
-		});
-	})(~_);
-};
+exports.exists = _(function(path, cb) {
+	fs.exists(path, function(result) {
+		cb(null, result);
+	});
+}, 1);
 
 // We only need the rest of the wrapper if running with a fast option. So test and bail out here
 if (!/-fast$/.test(require('streamline/lib/globals').runtime)) return;
