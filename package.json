@@ -1,7 +1,7 @@
 {
   "name": "streamline-fs",
   "description": "node fs wrapper for streamline.js fast mode",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/Sage/streamline-fs.git"
@@ -9,5 +9,5 @@
   "engines": { "node": ">=0.10.8" },
   "dependencies": {},
   "author": "Bruno Jouhier",
-  "main": "index._js"
+  "main": "index.js"
 }
